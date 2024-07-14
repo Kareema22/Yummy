@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Css</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body class="bg-black overflow-visible">
+    <div class="flex w-full">
+        <div class="loading-screen fixed left-1/2 top-1/2 justify-center align-middle">
+            <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+        </div>
+
+        <div class=" side-bar  bg-black flex  left-0 top-0 fixed min-h-full min-w-[15%]">
+            <div class="menu  text-white md:w-4/5" id="menu">
+                <div class="bar-links w-1/2">
+                    <ul class="p-4">
+                        <li class="py-2 relative top-96 cursor-pointer" id="search">Search</li>
+                        <li class="py-2 relative top-96  cursor-pointer" id="categories">Categories</li>
+                        <li class="py-2 relative  top-96 cursor-pointer" id="area">Area</li>
+                        <li class="py-2 relative top-96 cursor-pointer" id="ingredients">Ingredients</li>
+                        <li class="py-2 relative  top-96 cursor-pointer" id="contactUs">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="p-3 absolute bottom-2 bar-footer">
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook cursor-pointer"></i>
+                        <i class="fa-brands fa-twitter cursor-pointer"></i>
+                        <i class="fa-solid fa-globe cursor-pointer"></i>
+                    </div>
+                    <div class="footer">
+                        <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tap bg-white md:w-1/5 p-2" id="tap">
+                <img src="imgs/logo.png" class="start-0 h-12 w-12" />
+                <i class="p-2 fa-solid fa-bars text-4xl  absolute top-1/2 cursor-pointer" id="open"></i>
+                <i class="p-2 fa-solid fa-xmark text-4xl  absolute  top-1/2 cursor-pointer" id="close"></i>
+                <div class="p-2 absolute bottom-0  flex flex-col"><i class="fa-solid fa-globe d-block"></i><i
+                        class="fa-solid fa-share-nodes cursor-pointer"></i></div>
+
+            </div>
+        </div>
+
+        <div class="min-w-[84%] ml-[16%] min-h-full">
+            <div id="searchInput"></div>
+            <div id="content"></div>
+            <div class="inner-loading-screen fixed left-1/2 top-1/2 justify-center align-middle" style="display: none;">
+                <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
